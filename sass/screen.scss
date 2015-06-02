@@ -1,0 +1,636 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/utilities/general/float";
+@import "compass/css3";
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+
+@mixin nav-style
+{
+  font-family: 'Open Sans', sans-serif;
+}
+
+@mixin header-style
+{
+  font-family: 'Open Sans', sans-serif;
+}
+
+@mixin body-style
+{
+	font-family: 'Open Sans', sans-serif;
+}
+
+@mixin body-style-italics
+{
+	font-family: 'Open Sans', sans-serif;
+	font-style: italic;
+}
+
+$body-color: #808080;
+$line-color: #d7d7d7;
+$link-color: #80a0f5;
+
+
+/* #Global Styles
+================================================== */
+
+.container
+{
+  margin: 0 auto;
+}
+
+.inner
+{
+	width: 60%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+section.slide
+{
+	padding: 50px 0;
+}
+
+.decoration
+{
+	padding: 0 20px;
+}
+
+.half
+{
+	width: 50%;
+}
+.third
+{
+	width: 33%;	
+}
+.two-thirds
+{
+	width: 66%;
+}
+.full
+{
+	width: 100%;
+	clear: both;
+}
+
+.centred
+{
+	text-align: center;
+}
+
+.left
+{
+	@include float(left);
+}
+.right
+{
+	@include float(right);
+}
+
+.top
+{
+	vertical-align: top;
+}
+.middle
+{
+	vertical-align: middle;
+}
+
+.divider
+{
+	border-bottom: 1px solid $line-color;
+	margin-bottom: 20px;
+}
+
+.alert,
+.success
+{
+	text-align: center;
+	span
+	{
+		padding: 10px;
+		font-size: 14px;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	}
+}
+
+.alert span
+{
+	border: 1px solid #eed3d7;
+	background: #f2dede;
+	color: #b94a48;
+}
+
+.success span
+{
+	border: 1px solid #8bef8b;
+	background: #94ef94;
+	color: #468847;
+}
+
+/* #Site Styles
+================================================== */
+
+
+h1,h2,h3,h4,h5,h6
+{
+  text-align: left;
+	@include header-style();
+	padding: 0;
+	margin: 0;
+  color: $body-color;
+}
+
+
+h1
+{
+	font-size: 40px;
+	line-height: 36px;
+	padding: 0 0 60px;
+	span
+	{
+		border-bottom: 1px solid $line-color;
+	}
+}
+
+h2
+{
+  font-size: 30px;
+  line-height: 26px;
+	padding: 0 0 20px;
+}
+
+h3
+{
+  font-size: 24px;
+  line-height: 24px;
+	padding: 0 0 20px;
+}
+
+h4
+{
+  font-size: 20px;
+  line-height: 30px;
+	padding: 0 0 20px;
+}
+
+p, cite
+{
+	@include body-style();
+	display: block;
+	font-size: 18px;
+	line-height: 30px;
+	margin: 0;
+	padding: 0 0 20px;
+	color: $body-color;	
+}
+
+table
+{
+	tr 
+	{
+		&.header
+		{
+			background: #eee;
+		}
+
+		th
+		{
+			@include header-style();
+			font-size: 18px;
+			padding: 10px;
+			color: $body-color;
+			text-align: center;
+			border-right: 1px solid #fff;
+		}
+
+		td 
+		{
+			@include body-style();
+			font-size: 16px;
+			line-height: 20px;
+			padding: 10px;
+			color: $body-color;
+		}
+	}
+}
+
+cite, .emphasis
+{
+	@include header-style();
+	font-size: 18px;
+	line-height: 30px;
+	a
+	{
+		@include header-style();
+		font-style: normal;
+	}
+}
+
+cite
+{
+	font-style: normal;
+	span
+	{
+		display: block;
+		font-size: 20px;
+	}
+}
+
+p a
+{
+	color: $link-color;
+	font-style: italic;
+	@include body-style-italics();
+	text-decoration: none;
+	&:hover
+	{
+		text-decoration: underline;
+	}
+}
+
+blockquote
+{
+	font-style: italic;
+}
+
+strong
+{
+	font-weight: bold;
+}
+
+em 
+{
+	font-style: italic;
+}
+
+img#logo
+{
+  display: block;
+	width: 100%;
+}
+
+#intro { background: url(/images/background.png); }
+#about, #cv, #contact, #site-footer { background: #fff; }
+#gallery { background: #eee; }
+
+#intro
+{
+	height: 100vh;
+	padding-top: 100px;
+	img 
+	{
+		width: 100%;
+		padding: 2px;
+		border: 1px solid #ccc;
+	}
+}
+
+#about 
+{
+	background-image: url(/images/gallery/tv.jpg);
+	background-size: cover;
+	h1, p 
+	{
+		color: #fff;
+	}
+}
+
+#gallery .inner
+{
+	max-width: 960px;
+	margin: 0 auto;
+	padding-top: 20px;
+	.fotorama__stage img
+	{
+		top: -5px !important;
+		box-shadow: 0 0 8px #aaa !important;
+	}
+	.fotorama__nav-wrap
+	{
+		margin-top: 5px;
+	}
+}
+
+#cv
+{
+	table 
+	{
+		margin-bottom: 60px;
+		th 
+		{
+			width: 25%;
+		}
+	}
+}
+
+#contact
+{
+	p
+	{
+		padding: 0;
+		&:last-child
+		{
+			padding-bottom: 40px;
+		}
+		span
+		{
+			padding-left: 15px;
+		}
+	}
+}
+
+#twitter-block
+{
+	margin-bottom: 10px;
+	p 
+	{
+		margin-bottom: 10px;
+	}
+}
+
+#site-footer
+{
+	.inner
+	{
+		padding-top: 20px;
+		padding-bottom: 15px;
+		border-top: 1px solid $line-color;
+	}
+	h3, p
+	{
+		text-align: center;
+	}
+	p, a
+	{
+		font-size: 14px;
+		font-style: normal;
+	}
+}
+
+/* #menus
+================================================== */
+
+#primary
+{
+	background: #222;
+}
+
+.variable-center-nav
+{
+	position: fixed;
+	width: 100%;
+	z-index: 150;
+	margin: 0;
+	overflow: hidden;
+	@include nav-style();
+	
+	h2.smart-reveal
+	{
+		display: none;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
+	ul
+	{
+		clear: left;
+		float: left;
+		margin: 0;
+		padding: 0;
+		left: 50%;
+		position: relative;
+		text-align: center;
+		li
+		{
+			display: block;
+			padding: 0;
+			margin: 0;
+			@include float(left);
+			position: relative;
+			right: 50%;
+			a, span
+			{
+				line-height: 20px;
+				padding: 19px;
+				display: block;
+				text-decoration: none;
+				outline: none;
+				color: white;
+				font-weight: normal;
+				font-size: 1.4em;
+				line-height: 1.2em;
+				color: white;
+				text-transform: uppercase;
+				transition: color 0.3s;
+			}
+			a:hover
+			{
+				color: $link-color;
+			}
+			span.menu-divide
+			{
+				font-size: 12px;
+				padding: 20px 10px;
+			}
+
+		}
+		li:first-child
+		{
+			border-left: none;
+		}
+
+	}
+}
+
+/* #Responsive
+================================================== */
+
+@media only screen and (max-width: 800px)
+{
+	.inner
+	{
+		width: 90%;
+	}
+	.half
+	{
+		width: 100%;
+		clear: both;
+	}
+	.decoration
+	{
+		padding: 0 20px;
+	}
+
+.variable-center-nav
+	{
+		margin-left: 0;
+		
+		h2.smart-reveal
+		{
+			line-height: 20px;
+			padding: 0;
+			display: block;
+			color: white;
+			font-weight: normal;
+			font-size: 30px;
+			line-height: 20px;
+			@include header-style();
+			text-transform: uppercase;
+			text-align: left;
+			a
+			{
+				text-decoration: none;
+				outline: none;
+				color: white;
+				background: url(/images/menu-icon.svg) no-repeat 15px; 
+				padding: 15px 60px;
+				display: block;
+			}
+		}
+		ul.depth_0
+		{
+			display: none;
+			li
+			{
+				width: 100%;
+				display: block;
+				border-left: none;
+				a
+				{
+					width: 100%;
+					padding: 5px 0;
+					margin: 0;
+					border-top: 1px dotted #666;
+					border-left: none;
+				}
+				span.menu-divide
+				{
+					display: none;
+				}
+			}
+		}
+
+	}
+	.variable-center-nav.open-responsive
+	{
+		cursor: pointer;
+		ul
+		{
+			display: block;
+		}
+	}
+
+	#intro .inner
+	{
+		width: 720px;
+	}
+
+	#work
+	{
+		div.detail
+		{
+			width: 100%;
+			display: block;
+			float: none;
+		}
+	
+		div.thumb
+		{
+			width: 100%;
+			max-width: 400px;
+			max-height: 300px;
+			display: block;
+			float: none;
+		}
+	}
+}
+
+@media only screen and (max-width: 700px)
+{
+	#intro
+	{
+		padding-top: 60px;
+    .inner
+		{
+			width: 480px;
+		}
+	}
+
+	section.slide
+	{
+		padding-top: 30px;
+	}
+ }
+
+@media only screen and (max-width: 500px)
+{
+
+	h1
+	{
+		font-size: 50px;
+		line-height: 45px;
+	}
+
+	h2
+	{
+	    font-size: 30px;
+	    line-height: 30px;
+	}
+
+	h3
+	{
+	    font-size: 25px;
+	    line-height: 30px;
+	}
+
+	h4
+	{
+	    font-size: 22px;
+	    line-height: 24px;
+	}
+
+	p,cite
+	{
+
+		font-size: 15px;
+		line-height: 20px;
+	}
+
+	#site-footer
+	{
+		p.right, p.left
+		{
+			float: none;
+		}
+	}
+
+}
+
+@media only screen and (max-width: 480px)
+{
+	#intro .inner
+	{
+		width: 240px;
+	}
+}
+
+/* #Font-Face
+================================================== */
+
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('/fonts/bebasneue-webfont.eot');
+    src: url('/fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/bebasneue-webfont.woff') format('woff'),
+         url('/fonts/bebasneue-webfont.ttf') format('truetype'),
+         url('/fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

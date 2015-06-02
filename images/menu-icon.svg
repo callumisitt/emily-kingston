@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="35px" height="35px" viewBox="0.5 0.5 35 35" overflow="visible" enable-background="new 0.5 0.5 35 35"
+	 xml:space="preserve">
+<defs>
+</defs>
+<rect x="0.5" y="0.5" display="none" stroke="#FFFFFF" stroke-miterlimit="10" width="35" height="35"/>
+<path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M7.5,2.5h21c2.8,0,5,2.2,5,5v21c0,2.8-2.2,5-5,5
+	h-21c-2.8,0-5-2.2-5-5v-21C2.5,4.7,4.7,2.5,7.5,2.5z"/>
+<g id="Shape_2_2_">
+	<g>
+		<rect x="8.8" y="8.5" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="18.7" height="3"/>
+	</g>
+</g>
+<g id="Shape_2_copy_2_">
+	<g>
+		<rect x="8.8" y="15.5" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="18.7" height="3"/>
+	</g>
+</g>
+<g id="Shape_2_copy_2_2_">
+	<g>
+		<rect x="8.8" y="22.5" fill="#FFFFFF" width="18.7" height="3"/>
+	</g>
+</g>
+</svg>
