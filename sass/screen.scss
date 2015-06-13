@@ -7,16 +7,16 @@
 @import "compass/utilities/general/float";
 @import "compass/css3";
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300|Lato:400,700);
 
 @mixin nav-style
 {
-  font-family: 'Open Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 
 @mixin header-style
 {
-  font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 @mixin body-style
@@ -30,17 +30,50 @@
 	font-style: italic;
 }
 
-$body-color: #808080;
-$line-color: #d7d7d7;
-$link-color: #80a0f5;
+@mixin button($color, $reverse-color)
+{
+	border: 2px solid $color;
+	background: none;
+	padding: 0;
+	max-width: 250px;
+	margin: 10px auto;
+	transition: all 0.3s;
+	&:hover
+	{
+		background: $color;
+		a { color: $reverse-color; }
+	}
+	a
+	{
+		@include nav-style();
+		display: block;
+		padding: 5px 15px;
+		color: $color;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 20px;
+		text-decoration: none;
+		text-transform: uppercase;
+		text-align: center;
+		letter-spacing: 2px;
+		transition: color 0.3s;
+	}
+}
 
+$body-color: #fff;
+$line-color: #fff;
+$link-color: darken(#5b8ead, 10%);
+$nav-color: #29a26a;
 
-/* #Global Styles
+$background-color-1: #95dae5;
+$background-color-2: #41bfc7;
+
+/* Global Styles
 ================================================== */
 
 .container
 {
-  margin: 0 auto;
+	margin: 0 auto;
 }
 
 .inner
@@ -66,7 +99,7 @@ section.slide
 }
 .third
 {
-	width: 33%;	
+	width: 33%;
 }
 .two-thirds
 {
@@ -107,43 +140,17 @@ section.slide
 	margin-bottom: 20px;
 }
 
-.alert,
-.success
-{
-	text-align: center;
-	span
-	{
-		padding: 10px;
-		font-size: 14px;
-		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-	}
-}
-
-.alert span
-{
-	border: 1px solid #eed3d7;
-	background: #f2dede;
-	color: #b94a48;
-}
-
-.success span
-{
-	border: 1px solid #8bef8b;
-	background: #94ef94;
-	color: #468847;
-}
-
 /* #Site Styles
 ================================================== */
 
 
 h1,h2,h3,h4,h5,h6
 {
-  text-align: left;
+	text-align: left;
 	@include header-style();
 	padding: 0;
 	margin: 0;
-  color: $body-color;
+	color: $body-color;
 }
 
 
@@ -160,22 +167,22 @@ h1
 
 h2
 {
-  font-size: 30px;
-  line-height: 26px;
+	font-size: 30px;
+	line-height: 26px;
 	padding: 0 0 20px;
 }
 
 h3
 {
-  font-size: 24px;
-  line-height: 24px;
+	font-size: 24px;
+	line-height: 24px;
 	padding: 0 0 20px;
 }
 
 h4
 {
-  font-size: 20px;
-  line-height: 30px;
+	font-size: 20px;
+	line-height: 30px;
 	padding: 0 0 20px;
 }
 
@@ -187,16 +194,33 @@ p, cite
 	line-height: 30px;
 	margin: 0;
 	padding: 0 0 20px;
-	color: $body-color;	
+	color: $body-color;
+}
+
+p a
+{
+	color: $link-color;
+	font-style: italic;
+	@include body-style-italics();
+	text-decoration: none;
+	&:hover
+	{
+		text-decoration: underline;
+	}
+}
+
+button
+{
+	@include button(#fff, #666);
 }
 
 table
 {
-	tr 
+	tr
 	{
 		&.header
 		{
-			background: #eee;
+			background: lighten($background-color-2, 10%);
 		}
 
 		th
@@ -207,9 +231,13 @@ table
 			color: $body-color;
 			text-align: center;
 			border-right: 1px solid #fff;
+			&:last-child
+			{
+				border-right: 0;
+			}
 		}
 
-		td 
+		td
 		{
 			@include body-style();
 			font-size: 16px;
@@ -242,18 +270,6 @@ cite
 	}
 }
 
-p a
-{
-	color: $link-color;
-	font-style: italic;
-	@include body-style-italics();
-	text-decoration: none;
-	&:hover
-	{
-		text-decoration: underline;
-	}
-}
-
 blockquote
 {
 	font-style: italic;
@@ -264,41 +280,63 @@ strong
 	font-weight: bold;
 }
 
-em 
+em
 {
 	font-style: italic;
 }
 
-img#logo
-{
-  display: block;
-	width: 100%;
-}
-
-#intro { background: url(/images/background.png); }
-#about, #cv, #contact, #site-footer { background: #fff; }
-#gallery { background: #eee; }
+#intro { background: url(/images/background.jpg); }
+#about, #gallery { background: $background-color-1; }
+#cv, #contact, #site-footer { background: $background-color-2; }
 
 #intro
 {
-	height: 100vh;
+	height: 80vh;
 	padding-top: 100px;
-	img 
+	background-size: cover;
+	.inner
+	{
+		background-color: rgba(65, 191, 199, 0.55);
+	}
+	.decoration
+	{
+		position: relative;
+		overflow: hidden;
+		padding: 0;
+	}
+	.right
+	{
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		.info-box
+		{
+			margin: 60px;
+			text-align: center;
+		}
+	}
+	img
 	{
 		width: 100%;
-		padding: 2px;
-		border: 1px solid #ccc;
+	}
+	p, hr
+	{
+		line-height: 2em;
+		letter-spacing: 1px;
+		color: #fff;
+		text-align: center;
+	}
+	hr
+	{
+		margin: 20px 0;
+		border-style: solid;
 	}
 }
 
-#about 
+#about
 {
-	background-image: url(/images/gallery/tv.jpg);
-	background-size: cover;
-	h1, p 
-	{
-		color: #fff;
-	}
+
 }
 
 #gallery .inner
@@ -319,10 +357,10 @@ img#logo
 
 #cv
 {
-	table 
+	table
 	{
 		margin-bottom: 60px;
-		th 
+		th
 		{
 			width: 25%;
 		}
@@ -348,9 +386,10 @@ img#logo
 #twitter-block
 {
 	margin-bottom: 10px;
-	p 
+	p
 	{
 		margin-bottom: 10px;
+		img { width: 50%; }
 	}
 }
 
@@ -378,7 +417,7 @@ img#logo
 
 #primary
 {
-	background: #222;
+	background: #fff;
 }
 
 .variable-center-nav
@@ -389,7 +428,7 @@ img#logo
 	margin: 0;
 	overflow: hidden;
 	@include nav-style();
-	
+
 	h2.smart-reveal
 	{
 		display: none;
@@ -418,21 +457,20 @@ img#logo
 			a, span
 			{
 				line-height: 20px;
-				padding: 19px;
+				padding: 20px;
 				display: block;
 				text-decoration: none;
 				outline: none;
-				color: white;
-				font-weight: normal;
-				font-size: 1.4em;
-				line-height: 1.2em;
-				color: white;
+				color: $nav-color;
+				font-weight: 400;
+				font-size: 1em;
+				line-height: 1.8em;
 				text-transform: uppercase;
 				transition: color 0.3s;
 			}
 			a:hover
 			{
-				color: $link-color;
+				color: lighten($nav-color, 30%);
 			}
 			span.menu-divide
 			{
@@ -449,7 +487,7 @@ img#logo
 	}
 }
 
-/* #Responsive
+/* Responsive
 ================================================== */
 
 @media only screen and (max-width: 800px)
@@ -471,13 +509,12 @@ img#logo
 .variable-center-nav
 	{
 		margin-left: 0;
-		
+
 		h2.smart-reveal
 		{
 			line-height: 20px;
 			padding: 0;
 			display: block;
-			color: white;
 			font-weight: normal;
 			font-size: 30px;
 			line-height: 20px;
@@ -488,8 +525,7 @@ img#logo
 			{
 				text-decoration: none;
 				outline: none;
-				color: white;
-				background: url(/images/menu-icon.svg) no-repeat 15px; 
+				background: url(/images/menu-icon.svg) no-repeat 15px;
 				padding: 15px 60px;
 				display: block;
 			}
@@ -540,7 +576,7 @@ img#logo
 			display: block;
 			float: none;
 		}
-	
+
 		div.thumb
 		{
 			width: 100%;
@@ -556,10 +592,27 @@ img#logo
 {
 	#intro
 	{
+		height: auto;
 		padding-top: 60px;
-    .inner
+		background: $background-color-1;
+		.inner
 		{
 			width: 480px;
+			background-color: $background-color-2;
+		}
+		.decoration
+		{
+			overflow: visible;
+		}
+		.right
+		{
+	  	position: static;
+	  	top: 0;
+	  	transform: none;
+			.info-box
+			{
+				margin: 20px;
+			}
 		}
 	}
 
@@ -580,20 +633,20 @@ img#logo
 
 	h2
 	{
-	    font-size: 30px;
-	    line-height: 30px;
+			font-size: 30px;
+			line-height: 30px;
 	}
 
 	h3
 	{
-	    font-size: 25px;
-	    line-height: 30px;
+			font-size: 25px;
+			line-height: 30px;
 	}
 
 	h4
 	{
-	    font-size: 22px;
-	    line-height: 24px;
+			font-size: 22px;
+			line-height: 24px;
 	}
 
 	p,cite
@@ -619,18 +672,4 @@ img#logo
 	{
 		width: 240px;
 	}
-}
-
-/* #Font-Face
-================================================== */
-
-@font-face {
-    font-family: 'bebas_neueregular';
-    src: url('/fonts/bebasneue-webfont.eot');
-    src: url('/fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/bebasneue-webfont.woff') format('woff'),
-         url('/fonts/bebasneue-webfont.ttf') format('truetype'),
-         url('/fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
 }

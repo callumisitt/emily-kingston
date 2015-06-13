@@ -20,46 +20,13 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/images\/apple-touch-icon-114x114.png": {
-		"fileType": 32768,
+	"\/images\/background.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 263,
-		"inputAbbreviatedPath": "\/images\/apple-touch-icon-114x114.png",
-		"outputAbbreviatedPath": "\/images\/apple-touch-icon-114x114.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/apple-touch-icon-72x72.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 186,
-		"inputAbbreviatedPath": "\/images\/apple-touch-icon-72x72.png",
-		"outputAbbreviatedPath": "\/images\/apple-touch-icon-72x72.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/apple-touch-icon.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 164,
-		"inputAbbreviatedPath": "\/images\/apple-touch-icon.png",
-		"outputAbbreviatedPath": "\/images\/apple-touch-icon.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/background.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 20484,
-		"inputAbbreviatedPath": "\/images\/background.png",
-		"outputAbbreviatedPath": "\/images\/background.png",
+		"initialSize": 153971,
+		"inputAbbreviatedPath": "\/images\/background.jpg",
+		"outputAbbreviatedPath": "\/images\/background.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -75,24 +42,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/favicon-152.png": {
+	"\/images\/emily-kingston.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 22366,
-		"inputAbbreviatedPath": "\/images\/favicon-152.png",
-		"outputAbbreviatedPath": "\/images\/favicon-152.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/favicon-src.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 119,
-		"inputAbbreviatedPath": "\/images\/favicon-src.png",
-		"outputAbbreviatedPath": "\/images\/favicon-src.png",
+		"initialSize": 6859,
+		"inputAbbreviatedPath": "\/images\/emily-kingston.png",
+		"outputAbbreviatedPath": "\/images\/emily-kingston.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -130,13 +86,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/mobile.png": {
-		"fileType": 32768,
+	"\/images\/headshot-intro.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1470,
-		"inputAbbreviatedPath": "\/images\/mobile.png",
-		"outputAbbreviatedPath": "\/images\/mobile.png",
+		"initialSize": 62321,
+		"inputAbbreviatedPath": "\/images\/headshot-intro.jpg",
+		"outputAbbreviatedPath": "\/images\/headshot-intro.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -145,7 +101,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1853,
+		"initialSize": 5635,
 		"inputAbbreviatedPath": "\/images\/twitter.png",
 		"outputAbbreviatedPath": "\/images\/twitter.png",
 		"outputPathIsOutsideProject": 0,
