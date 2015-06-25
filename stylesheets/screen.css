@@ -95,7 +95,7 @@ section.slide {
   vertical-align: middle; }
 
 .divider {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #aeaeae;
   margin-bottom: 20px; }
 
 /* #Site Styles
@@ -105,14 +105,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', sans-serif;
   padding: 0;
   margin: 0;
-  color: #fff; }
+  color: #555; }
 
 h1 {
   font-size: 40px;
   line-height: 36px;
   padding: 0 0 60px; }
   h1 span {
-    border-bottom: 1px solid #fff; }
+    border-bottom: 1px solid #aeaeae; }
 
 h2 {
   font-size: 30px;
@@ -136,7 +136,7 @@ p, cite {
   line-height: 30px;
   margin: 0;
   padding: 0 0 20px;
-  color: #fff; }
+  color: #555; }
 
 p a {
   color: #47738e;
@@ -173,12 +173,12 @@ button {
     transition: color 0.3s; }
 
 table tr.header {
-  background: #68ccd3; }
+  background: #f9f8f3; }
 table tr th {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   padding: 10px;
-  color: #fff;
+  color: #555;
   text-align: center;
   border-right: 1px solid #fff; }
   table tr th:last-child {
@@ -188,7 +188,7 @@ table tr td {
   font-size: 16px;
   line-height: 20px;
   padding: 10px;
-  color: #fff; }
+  color: #555; }
 
 cite, .emphasis {
   font-family: 'Open Sans', sans-serif;
@@ -216,11 +216,14 @@ em {
 #intro {
   background: url(/images/background.jpg); }
 
-#about, #gallery {
-  background: #95dae5; }
+#about, #gallery, #contact, #site-footer {
+  background: #f9f8f3; }
 
-#cv, #contact, #site-footer {
-  background: #41bfc7; }
+#cv {
+  background: #daede7; }
+
+#media {
+  background: #000; }
 
 #intro {
   height: 80vh;
@@ -266,6 +269,11 @@ em {
   #cv table th {
     width: 25%; }
 
+#media {
+  margin: 0 auto; }
+  #media .inner {
+    width: 80%; }
+
 #contact p {
   padding: 0; }
   #contact p:last-child {
@@ -283,7 +291,7 @@ em {
 #site-footer .inner {
   padding-top: 20px;
   padding-bottom: 15px;
-  border-top: 1px solid #fff; }
+  border-top: 1px solid #aeaeae; }
 #site-footer h3, #site-footer p {
   text-align: center; }
 #site-footer p, #site-footer a {
@@ -410,10 +418,10 @@ em {
   #intro {
     height: auto;
     padding-top: 60px;
-    background: #95dae5; }
+    background: #f9f8f3; }
     #intro .inner {
       width: 480px;
-      background-color: #41bfc7; }
+      background-color: #daede7; }
     #intro .decoration {
       overflow: visible; }
     #intro .right {

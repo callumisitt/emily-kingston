@@ -60,13 +60,13 @@
 	}
 }
 
-$body-color: #fff;
-$line-color: #fff;
+$body-color: #555;
+$line-color: lighten(#555, 35%);
 $link-color: darken(#5b8ead, 10%);
 $nav-color: #29a26a;
 
-$background-color-1: #95dae5;
-$background-color-2: #41bfc7;
+$background-color-1: #f9f8f3;
+$background-color-2: #daede7;
 
 /* Global Styles
 ================================================== */
@@ -220,7 +220,7 @@ table
 	{
 		&.header
 		{
-			background: lighten($background-color-2, 10%);
+			background: $background-color-1;
 		}
 
 		th
@@ -286,8 +286,9 @@ em
 }
 
 #intro { background: url(/images/background.jpg); }
-#about, #gallery { background: $background-color-1; }
-#cv, #contact, #site-footer { background: $background-color-2; }
+#about, #gallery, #contact, #site-footer { background: $background-color-1; }
+#cv { background: $background-color-2; }
+#media { background: #000; }
 
 #intro
 {
@@ -365,6 +366,12 @@ em
 			width: 25%;
 		}
 	}
+}
+
+#media
+{
+	.inner { width: 80%; }
+	margin: 0 auto;
 }
 
 #contact
