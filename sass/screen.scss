@@ -60,13 +60,16 @@
 	}
 }
 
-$body-color: #555;
-$line-color: lighten(#555, 35%);
-$link-color: darken(#5b8ead, 10%);
-$nav-color: #29a26a;
+$body-color-1: #9f8c7c;
+$body-color-2: #7b9a90;
 
 $background-color-1: #f9f8f3;
 $background-color-2: #daede7;
+
+$link-color-1: darken($body-color-1, 25%);
+$link-color-2: darken($body-color-2, 30%);
+
+$nav-color: #29a26a;
 
 /* Global Styles
 ================================================== */
@@ -136,7 +139,7 @@ section.slide
 
 .divider
 {
-	border-bottom: 1px solid $line-color;
+	border-bottom: 1px solid $body-color-1;
 	margin-bottom: 20px;
 }
 
@@ -150,7 +153,7 @@ h1,h2,h3,h4,h5,h6
 	@include header-style();
 	padding: 0;
 	margin: 0;
-	color: $body-color;
+	color: $body-color-1;
 }
 
 
@@ -161,7 +164,7 @@ h1
 	padding: 0 0 60px;
 	span
 	{
-		border-bottom: 1px solid $line-color;
+		border-bottom: 1px solid $body-color-1;
 	}
 }
 
@@ -186,6 +189,12 @@ h4
 	padding: 0 0 20px;
 }
 
+div
+{
+	@include body-style();
+	color: $body-color-1;
+}
+
 p, cite
 {
 	@include body-style();
@@ -194,12 +203,11 @@ p, cite
 	line-height: 30px;
 	margin: 0;
 	padding: 0 0 20px;
-	color: $body-color;
+	color: $body-color-1;
 }
 
 p a
 {
-	color: $link-color;
 	font-style: italic;
 	@include body-style-italics();
 	text-decoration: none;
@@ -220,7 +228,7 @@ table
 	{
 		&.header
 		{
-			background: $background-color-1;
+			background: $body-color-2;
 		}
 
 		th
@@ -228,7 +236,7 @@ table
 			@include header-style();
 			font-size: 18px;
 			padding: 10px;
-			color: $body-color;
+			color: #fff;
 			text-align: center;
 			border-right: 1px solid #fff;
 			&:last-child
@@ -243,7 +251,7 @@ table
 			font-size: 16px;
 			line-height: 20px;
 			padding: 10px;
-			color: $body-color;
+			color: $body-color-2;
 		}
 	}
 }
@@ -286,18 +294,43 @@ em
 }
 
 #intro { background: url(/images/background.jpg); }
-#about, #gallery, #contact, #site-footer { background: $background-color-1; }
-#cv { background: $background-color-2; }
+
+#about, #gallery
+{
+	background: $background-color-1;
+	h1, h3, p { color: $body-color-1; }
+	h1 span
+	{
+		border-bottom: 1px solid $body-color-1;
+	}
+	p a	{ color: $link-color-1; }
+}
+
+#cv, #contact, #site-footer
+{
+	background: $background-color-2;
+	h1, h3, p { color: $body-color-2; }
+	h1 span
+	{
+		border-bottom: 1px solid $body-color-2;
+	}
+	p a	{ color: $link-color-2; }
+}
+
 #media { background: #000; }
 
 #intro
 {
-	height: 80vh;
-	padding-top: 100px;
+	min-height: 80vh;
 	background-size: cover;
+	display: flex;
+  align-items: center;
 	.inner
 	{
 		background-color: rgba(65, 191, 199, 0.55);
+		width: 100%;
+		max-width: 860px;
+		margin-top: 68px;
 	}
 	.decoration
 	{
@@ -311,6 +344,7 @@ em
 		top: 50%;
 		right: 0;
 		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
 		.info-box
 		{
 			margin: 60px;
@@ -330,14 +364,9 @@ em
 	}
 	hr
 	{
-		margin: 20px 0;
+		margin: 5px 0 20px 0;
 		border-style: solid;
 	}
-}
-
-#about
-{
-
 }
 
 #gallery .inner
@@ -345,10 +374,13 @@ em
 	max-width: 960px;
 	margin: 0 auto;
 	padding-top: 20px;
-	.fotorama__stage img
+	.fotorama__stage
 	{
-		top: -5px !important;
-		box-shadow: 0 0 8px #aaa !important;
+		background-color: rgba(159, 140, 124, 0.3);
+		img
+		{
+			box-shadow: 0 0 8px #aaa !important;
+		}
 	}
 	.fotorama__nav-wrap
 	{
@@ -370,7 +402,7 @@ em
 
 #media
 {
-	.inner { width: 80%; }
+	.inner { width: 82%; }
 	margin: 0 auto;
 }
 
@@ -388,11 +420,14 @@ em
 			padding-left: 15px;
 		}
 	}
+	img { width: 40px; }
 }
 
 #twitter-block
 {
 	margin-bottom: 10px;
+	background-color: darken($background-color-2, 5%);
+	border-radius: 5px;
 	p
 	{
 		margin-bottom: 10px;
@@ -406,7 +441,7 @@ em
 	{
 		padding-top: 20px;
 		padding-bottom: 15px;
-		border-top: 1px solid $line-color;
+		border-top: 1px solid lighten($body-color-2, 25%);
 	}
 	h3, p
 	{
@@ -513,7 +548,7 @@ em
 		padding: 0 20px;
 	}
 
-.variable-center-nav
+	.variable-center-nav
 	{
 		margin-left: 0;
 
@@ -523,7 +558,7 @@ em
 			padding: 0;
 			display: block;
 			font-weight: normal;
-			font-size: 30px;
+			font-size: 25px;
 			line-height: 20px;
 			@include header-style();
 			text-transform: uppercase;
@@ -535,6 +570,7 @@ em
 				background: url(/images/menu-icon.svg) no-repeat 15px;
 				padding: 15px 60px;
 				display: block;
+				color: $nav-color;
 			}
 		}
 		ul.depth_0
@@ -550,7 +586,7 @@ em
 					width: 100%;
 					padding: 5px 0;
 					margin: 0;
-					border-top: 1px dotted #666;
+					border-top: 1px dotted #ccc;
 					border-left: none;
 				}
 				span.menu-divide
@@ -572,9 +608,16 @@ em
 
 	#intro .inner
 	{
-		width: 720px;
+		width: 60%;
+		.right
+		{
+			position: inherit;
+			top: 0;
+			right: 0;
+			transform: none;
+			-webkit-transform: none;
+		}
 	}
-
 	#work
 	{
 		div.detail
@@ -601,11 +644,10 @@ em
 	{
 		height: auto;
 		padding-top: 60px;
-		background: $background-color-1;
 		.inner
 		{
-			width: 480px;
-			background-color: $background-color-2;
+			width: 60%;
+			margin-top: 0;
 		}
 		.decoration
 		{
@@ -613,9 +655,10 @@ em
 		}
 		.right
 		{
-	  	position: static;
-	  	top: 0;
-	  	transform: none;
+			position: static;
+			top: 0;
+			transform: none;
+			-webkit-transform: none;
 			.info-box
 			{
 				margin: 20px;
@@ -634,33 +677,49 @@ em
 
 	h1
 	{
-		font-size: 50px;
-		line-height: 45px;
+		font-size: 40px;
+		line-height: 35px;
 	}
 
 	h2
 	{
-			font-size: 30px;
-			line-height: 30px;
+		font-size: 30px;
+		line-height: 30px;
 	}
 
 	h3
 	{
-			font-size: 25px;
-			line-height: 30px;
+		font-size: 22px;
+		line-height: 24px;
 	}
 
 	h4
 	{
-			font-size: 22px;
-			line-height: 24px;
+		font-size: 18px;
+		line-height: 220px;
 	}
 
-	p,cite
+	p, cite
 	{
+		font-size: 16px;
+		line-height: 28px;
+	}
 
-		font-size: 15px;
-		line-height: 20px;
+	table tr
+	{
+		th
+		{
+			font-size: 16px;
+		}
+		td
+		{
+			font-size: 14px;
+		}
+	}
+
+	#cv .decoration
+	{
+		padding: 0;
 	}
 
 	#site-footer
