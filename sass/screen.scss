@@ -293,7 +293,11 @@ em
 	font-style: italic;
 }
 
-#intro { background: url(/images/background.jpg); }
+#intro
+{
+	background: url(/images/background.jpg);
+	background-position: center;
+}
 
 #about, #gallery
 {
@@ -734,8 +738,16 @@ em
 
 @media only screen and (max-width: 480px)
 {
-	#intro .inner
+	#intro
 	{
-		width: 240px;
+		background: #B8EEFD;
+		.inner
+		{
+			width: 80%;
+		}
+	}
+	#contact-details
+	{
+		padding: 0;
 	}
 }

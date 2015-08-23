@@ -217,7 +217,8 @@ em {
   font-style: italic; }
 
 #intro {
-  background: url(/images/background.jpg); }
+  background: url(/images/background.jpg);
+  background-position: center; }
 
 #about, #gallery {
   background: #f9f8f3; }
@@ -279,7 +280,7 @@ em {
   margin: 0 auto;
   padding-top: 20px; }
   #gallery .inner .fotorama__stage {
-    background-color: rgba(159, 140, 124, 0.3); }
+    background: url("/images/gallery-bg.gif"); }
     #gallery .inner .fotorama__stage img {
       box-shadow: 0 0 8px #aaa !important; }
   #gallery .inner .fotorama__nav-wrap {
@@ -497,5 +498,10 @@ em {
   #site-footer p.right, #site-footer p.left {
     float: none; } }
 @media only screen and (max-width: 480px) {
-  #intro .inner {
-    width: 240px; } }
+  #intro {
+    background: #B8EEFD; }
+    #intro .inner {
+      width: 80%; }
+
+  #contact-details {
+    padding: 0; } }
