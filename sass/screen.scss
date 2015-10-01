@@ -293,6 +293,11 @@ em
 	font-style: italic;
 }
 
+small
+{
+	font-size: 0.8em;
+}
+
 #intro
 {
 	background: url(/images/background.jpg);
@@ -415,6 +420,7 @@ em
 	p
 	{
 		padding: 0;
+		padding-bottom: 20px;
 		&:last-child
 		{
 			padding-bottom: 40px;

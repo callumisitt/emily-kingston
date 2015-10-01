@@ -216,6 +216,9 @@ strong {
 em {
   font-style: italic; }
 
+small {
+  font-size: 0.8em; }
+
 #intro {
   background: url(/images/background.jpg);
   background-position: center; }
@@ -297,7 +300,8 @@ em {
     width: 82%; }
 
 #contact p {
-  padding: 0; }
+  padding: 0;
+  padding-bottom: 20px; }
   #contact p:last-child {
     padding-bottom: 40px; }
   #contact p span {
