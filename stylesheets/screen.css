@@ -225,21 +225,24 @@ small {
 
 #about, #gallery {
   background: #f9f8f3; }
-  #about h1, #about h3, #about p, #gallery h1, #gallery h3, #gallery p {
+  #about h1, #about h2, #about h3, #about p, #gallery h1, #gallery h2, #gallery h3, #gallery p {
     color: #9f8c7c; }
   #about h1 span, #gallery h1 span {
     border-bottom: 1px solid #9f8c7c; }
   #about p a, #gallery p a {
     color: #5a4d42; }
 
-#cv, #contact, #site-footer {
+#audio, #contact, #site-footer {
   background: #daede7; }
-  #cv h1, #cv h3, #cv p, #contact h1, #contact h3, #contact p, #site-footer h1, #site-footer h3, #site-footer p {
+  #audio h1, #audio h2, #audio h3, #audio p, #contact h1, #contact h2, #contact h3, #contact p, #site-footer h1, #site-footer h2, #site-footer h3, #site-footer p {
     color: #7b9a90; }
-  #cv h1 span, #contact h1 span, #site-footer h1 span {
+  #audio h1 span, #contact h1 span, #site-footer h1 span {
     border-bottom: 1px solid #7b9a90; }
-  #cv p a, #contact p a, #site-footer p a {
+  #audio p a, #contact p a, #site-footer p a {
     color: #364641; }
+  #audio .divider, #contact .divider, #site-footer .divider {
+    border-bottom: 1px solid #c2dcd4;
+    padding-bottom: 20px; }
 
 #media {
   background: #000; }
@@ -267,6 +270,9 @@ small {
     #intro .right .info-box {
       margin: 60px;
       text-align: center; }
+  #intro .headshot {
+    padding: 10px;
+    padding-bottom: 8px; }
   #intro img {
     width: 100%; }
   #intro p, #intro hr {
@@ -277,6 +283,16 @@ small {
   #intro hr {
     margin: 5px 0 20px 0;
     border-style: solid; }
+
+#audio audio {
+  min-width: 300px;
+  margin-bottom: 20px; }
+#audio h3 {
+  padding-bottom: 10px;
+  font-size: 18px; }
+  #audio h3 span {
+    font-size: 14px;
+    font-style: italic; }
 
 #gallery .inner {
   max-width: 960px;
@@ -440,6 +456,8 @@ small {
       right: 0;
       transform: none;
       -webkit-transform: none; }
+    #intro .inner .headshot {
+      padding: 0; }
 
   #work div.detail {
     width: 100%;
@@ -454,7 +472,7 @@ small {
 @media only screen and (max-width: 700px) {
   #intro {
     height: auto;
-    padding-top: 60px; }
+    padding-top: 70px; }
     #intro .inner {
       width: 60%;
       margin-top: 0; }

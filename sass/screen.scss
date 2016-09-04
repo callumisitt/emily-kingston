@@ -100,14 +100,17 @@ section.slide
 {
 	width: 50%;
 }
+
 .third
 {
 	width: 33%;
 }
+
 .two-thirds
 {
 	width: 66%;
 }
+
 .full
 {
 	width: 100%;
@@ -123,6 +126,7 @@ section.slide
 {
 	@include float(left);
 }
+
 .right
 {
 	@include float(right);
@@ -132,6 +136,7 @@ section.slide
 {
 	vertical-align: top;
 }
+
 .middle
 {
 	vertical-align: middle;
@@ -150,7 +155,7 @@ section.slide
 h1,h2,h3,h4,h5,h6
 {
 	text-align: left;
-	@include header-style();
+	@include header-style;
 	padding: 0;
 	margin: 0;
 	color: $body-color-1;
@@ -191,13 +196,13 @@ h4
 
 div
 {
-	@include body-style();
+	@include body-style;
 	color: $body-color-1;
 }
 
 p, cite
 {
-	@include body-style();
+	@include body-style;
 	display: block;
 	font-size: 18px;
 	line-height: 30px;
@@ -209,8 +214,9 @@ p, cite
 p a
 {
 	font-style: italic;
-	@include body-style-italics();
+	@include body-style-italics;
 	text-decoration: none;
+
 	&:hover
 	{
 		text-decoration: underline;
@@ -307,23 +313,35 @@ small
 #about, #gallery
 {
 	background: $background-color-1;
-	h1, h3, p { color: $body-color-1; }
+
+	h1, h2, h3, p { color: $body-color-1; }
+
 	h1 span
 	{
 		border-bottom: 1px solid $body-color-1;
 	}
-	p a	{ color: $link-color-1; }
+
+	p a { color: $link-color-1; }
 }
 
-#cv, #contact, #site-footer
+#audio, #contact, #site-footer
 {
 	background: $background-color-2;
-	h1, h3, p { color: $body-color-2; }
+
+	h1, h2, h3, p { color: $body-color-2; }
+
 	h1 span
 	{
 		border-bottom: 1px solid $body-color-2;
 	}
-	p a	{ color: $link-color-2; }
+
+	p a { color: $link-color-2; }
+
+	.divider
+	{
+		border-bottom: 1px solid #c2dcd4;
+		padding-bottom: 20px;
+	}
 }
 
 #media { background: #000; }
@@ -333,7 +351,8 @@ small
 	min-height: 80vh;
 	background-size: cover;
 	display: flex;
-  align-items: center;
+	align-items: center;
+
 	.inner
 	{
 		background-color: rgba(65, 191, 199, 0.55);
@@ -341,12 +360,14 @@ small
 		max-width: 860px;
 		margin-top: 68px;
 	}
+
 	.decoration
 	{
 		position: relative;
 		overflow: hidden;
 		padding: 0;
 	}
+
 	.right
 	{
 		position: absolute;
@@ -354,16 +375,25 @@ small
 		right: 0;
 		transform: translateY(-50%);
 		-webkit-transform: translateY(-50%);
+
 		.info-box
 		{
 			margin: 60px;
 			text-align: center;
 		}
 	}
+
+	.headshot
+	{
+		padding: 10px;
+		padding-bottom: 8px;
+	}
+
 	img
 	{
 		width: 100%;
 	}
+
 	p, hr
 	{
 		line-height: 2em;
@@ -371,10 +401,32 @@ small
 		color: #fff;
 		text-align: center;
 	}
+
 	hr
 	{
 		margin: 5px 0 20px 0;
 		border-style: solid;
+	}
+}
+
+#audio
+{
+	audio
+	{
+		min-width: 300px;
+		margin-bottom: 20px;
+	}
+
+	h3
+	{
+		padding-bottom: 10px;
+		font-size: 18px;
+
+		span
+		{
+			font-size: 14px;
+			font-style: italic;
+		}
 	}
 }
 
@@ -383,6 +435,7 @@ small
 	max-width: 960px;
 	margin: 0 auto;
 	padding-top: 20px;
+
 	.fotorama__stage
 	{
 		background: url('/images/gallery-bg.gif');
@@ -391,6 +444,7 @@ small
 			box-shadow: 0 0 8px #aaa !important;
 		}
 	}
+
 	.fotorama__nav-wrap
 	{
 		margin-top: 5px;
@@ -548,11 +602,13 @@ small
 	{
 		width: 90%;
 	}
+
 	.half
 	{
 		width: 100%;
 		clear: both;
 	}
+
 	.decoration
 	{
 		padding: 0 20px;
@@ -570,9 +626,10 @@ small
 			font-weight: normal;
 			font-size: 25px;
 			line-height: 20px;
-			@include header-style();
+			@include header-style;
 			text-transform: uppercase;
 			text-align: left;
+
 			a
 			{
 				text-decoration: none;
@@ -583,14 +640,17 @@ small
 				color: $nav-color;
 			}
 		}
+
 		ul.depth_0
 		{
 			display: none;
+
 			li
 			{
 				width: 100%;
 				display: block;
 				border-left: none;
+
 				a
 				{
 					width: 100%;
@@ -599,17 +659,19 @@ small
 					border-top: 1px dotted #ccc;
 					border-left: none;
 				}
+
 				span.menu-divide
 				{
 					display: none;
 				}
 			}
 		}
-
 	}
+
 	.variable-center-nav.open-responsive
 	{
 		cursor: pointer;
+
 		ul
 		{
 			display: block;
@@ -619,6 +681,7 @@ small
 	#intro .inner
 	{
 		width: 60%;
+
 		.right
 		{
 			position: inherit;
@@ -627,7 +690,13 @@ small
 			transform: none;
 			-webkit-transform: none;
 		}
+
+		.headshot
+		{
+			padding: 0;
+		}
 	}
+
 	#work
 	{
 		div.detail
@@ -653,22 +722,26 @@ small
 	#intro
 	{
 		height: auto;
-		padding-top: 60px;
+		padding-top: 70px;
+
 		.inner
 		{
 			width: 60%;
 			margin-top: 0;
 		}
+
 		.decoration
 		{
 			overflow: visible;
 		}
+
 		.right
 		{
 			position: static;
 			top: 0;
 			transform: none;
 			-webkit-transform: none;
+
 			.info-box
 			{
 				margin: 20px;
@@ -721,6 +794,7 @@ small
 		{
 			font-size: 16px;
 		}
+
 		td
 		{
 			font-size: 14px;
@@ -747,11 +821,13 @@ small
 	#intro
 	{
 		background: #B8EEFD;
+
 		.inner
 		{
 			width: 80%;
 		}
 	}
+
 	#contact-details
 	{
 		padding: 0;
