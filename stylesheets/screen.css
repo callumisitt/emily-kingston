@@ -65,6 +65,8 @@ section.slide {
 
 .decoration {
   padding: 0 20px; }
+  .decoration p:last-child {
+    padding-bottom: 0; }
 
 .half {
   width: 50%; }

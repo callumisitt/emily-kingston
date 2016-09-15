@@ -94,6 +94,11 @@ section.slide
 .decoration
 {
 	padding: 0 20px;
+
+	p:last-child
+	{
+		padding-bottom: 0;
+	}
 }
 
 .half
